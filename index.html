@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="website icon" type="png" href="img/logo.png">
+    <script src="https://kit.fontawesome.com/9f004c4c7f.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Curriculum Vitae</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar container">
+            <a href="#" class="logo">NICOLAS MATIAS DENIEL</a> 
+            <input type="checkbox" id="toggler" />
+            <label for="toggler">
+                <svg class="ham ham6" viewBox="0 0 100 100" width="80px" onclick="this.classList.toggle('active')">
+                    <path
+                        class="line top"
+                        d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272" />
+                    <path
+                        class="line middle"
+                        d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272" />
+                    <path
+                        class="line bottom"
+                        d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272" />
+                </svg>
+            </label>
+            <div class="menu">
+                <ul class="list">
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#trainings">Trainings</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="aboutme">
+            <div class="description">
+                <h1>Jr. Front-End Dev</h1>
+                <!-- <p>Bienvenidos, mi nombre es Nicolas Deniel. Tengo 24 años. Estudio todos los días para mejorar en el desarrollo Front-End y sus tecnologías. Mi objetivo es conseguir un trabajo en dónde pueda aprender, adquirir experiencia y practicar mis habilidades en desarrollo web y diseño</p> -->
+            </div>
+            <div class="image">
+                <img src="img/selfie.png" alt="">
+            </div>
+            
+            
+        </div>
+    </header>
+    <div class="main">
+        <aside>
+            <div class="contact" id="contact">
+                <h2>CONTACT</h2>
+                <p id="mail"><i class="fa-solid fa-at"></i> nicolasmdeniel@gmail.com</p>
+                <p><i class="fa-solid fa-mobile-screen-button"></i> (+54) 341-5839708</p>
+                <button class="page" onclick="redirect()"><i class="fa-solid fa-globe"></i>  My main page</button>
+            </div>
+            <div class="education">
+                <h2>EDUCATION</h2>
+                <i class="fa-solid fa-school"></i>
+                <p>EES N° 404 <br>Orientación: Informática 2018</p>
+                <i class="fa-solid fa-graduation-cap"></i>
+                <p>ISEI+4030 - TERCIARIO <br> Graphic Design 2019</p>
+            </div>
+        </aside>
+        <section>
+            <article>
+                <h2 class="experience" id="experience">EXPERIENCE</h2>
+                <div class="main-ttl">
+                    <i class="fa-solid fa-utensils"></i>
+                    <h3>Marvel Food Rosario</h3>
+                </div>
+                <h4>06/2021 - 07/2022</h4>
+                <button type="button" id="btn-expand-marvel">Read description</button>
+                <p id="desc-text-marvel">Tasks I made: Grill and fryer cooking, production andcooking of ingredients for hamburgers, washing workutensils, assembly of hamburgers, and distribution of ingredients to branches</p>
+            </article>
+            <article>
+                <h2 class="trainings" id="trainings">TRAININGS</h2>
+                <br>
+                <div class="main-ttl">
+                    <i class="fa-brands fa-free-code-camp"></i>
+                    <h3>freeCodeCamp</h3>
+                </div>
+                    <h4>03/2022 - Present</h4>
+                <button type="button" id="btn-expand-fcc">Read Description</button>
+                <p id="desc-text-fcc">Responsive Web Design Certification | JavaScript Algorithms and Data Structure Certification | Front End Development Libraries Certification</p>
+                <br>
+                <div class="main-ttl">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h3>Open Bootcamp</h3>
+                </div>
+                <h4>10/2022 - Present</h4>
+                <button type="button" id="btn-expand-obc">Read Description</button>
+                <p id="desc-text-obc">Front-End Technologies</p>
+                <br>
+                <div class="main-ttl">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Argentina Programa 4.0</h3>
+                </div>
+                    <h4>12/2022 - 02/2023</h4>
+                <button type="button" id="btn-expand-ap">Read Description</button>
+                <p id="desc-text-ap">First steps on Front-End Development</p>
+                <p></p>
+            </article>
+            <article id="skills">
+                <h2>SKILLS</h2>
+                <div class="main-ttl">
+                    <i class="fa-brands fa-html5"></i>
+                    <h3>HTML5</h3>
+                    <h4 class="skill-cap">Advance</h4>
+                </div>
+                <div class="main-ttl">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                    <h4 class="skill-cap">Advance</h4>
+                </div>
+                <div class="main-ttl">
+                    <i class="fa-brands fa-square-js"></i>
+                    <h3>JavaScript</h3>
+                    <h4 class="skill-cap">Medium-Advance</h4>
+                </div>
+                <div class="main-ttl">
+                    <i class="fa-brands fa-bootstrap"></i>
+                    <h3>BootStrap</h3>
+                    <h4 class="skill-cap">Medium-Advance</h4>
+                </div>
+                <div class="main-ttl">
+                    <i class="fa-brands fa-react"></i>
+                    <h3>ReactJs</h3>
+                    <h4 class="skill-cap">Medium-Advance</h4>
+                </div>
+            </article>
+        </section>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

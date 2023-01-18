@@ -1,0 +1,388 @@
+/* Import font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to bottom, #000, #815b17, #000);
+    background-repeat: no-repeat;
+    min-height: 1080px;
+    padding: 25px 10% 25px 10%;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+/* about-me styles */
+
+.aboutme {
+    width: 100%;
+}
+
+.description {
+    position: absolute;
+    z-index: 1;
+    margin-top: 25px;
+    width: 50%;
+    right: 10%;
+    /* border: 3px solid green; */
+    /* max-height: 600px; */
+}
+
+.description h1 {
+    text-shadow: 1px 1px 5px #b4b1b1 ;
+}
+
+.description p {
+    width: 100%;
+    text-shadow: 1px 1px 5px #b4b1b1 ;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.aboutme .image {
+    width: 100%;
+}
+
+.aboutme .image img {
+    margin-top: 15px;
+    max-width: 100%;
+    position: relative;
+    background-size: cover;
+    overflow: hidden;
+    filter: blur(0.8px);
+    border: 2px solid #e2cca5;
+}
+
+/* general styles below description */
+
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+}
+
+/* aside styles */
+
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: #b4b1b1;
+    text-align: center;
+    height: 70vh;
+    z-index: 1;
+    border: 2px solid #e2cca5;
+    justify-content: space-around;
+}
+
+.education svg {
+    width: 10rem;
+}
+
+/* section styles */
+
+section {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+section article {
+    border: 2px solid #e2cca5;
+    background-color: #b4b1b1;
+    padding: 3%;
+}
+
+section article h2 {
+    text-align: center;
+}
+
+.main-ttl {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#desc-text-marvel {
+    display: none;
+}
+
+#desc-text-fcc {
+    display: none;
+}
+
+#desc-text-obc {
+    display: none;
+}
+
+#desc-text-ap {
+    display: none;
+}
+
+button {
+    margin: 3vh;
+    padding: 1vh;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    outline: 2px solid #815b17;
+    overflow: hidden;
+    transition: color 1s;
+}
+
+button:hover {
+    color: #e2cca5;
+    z-index: 1;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    z-index: -1;
+    width: 150%;
+    height: 100%;
+    background-color: #815b17;
+    transform: scaleX(0) skewX(35deg);
+    transform-origin: left;
+    transition: transform 1s;
+}
+
+button:hover::before {
+    transform: scaleX(1) skew(35deg);
+}
+
+.skill-cap {
+    color: #464444;
+}
+
+/* Color Palette:
+#b4b1b1 #e2cca5 #815b17 #c8cbcd*/
+
+
+/* Link Hover animation */
+
+ul {
+    display: flex;
+    justify-content: right;
+    gap: 64px;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 10px;
+    transition: 0.5s ease;
+}
+
+ul:hover li a {
+    color: #815b17;
+}
+
+ul:hover li a:not(:hover) {
+    color: #000000;
+    opacity: 0.3;
+    filter: blur(1px);
+}
+
+
+/* ham menu */
+
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+.hamRotate.active {
+    transform: rotate(45deg);
+}
+.hamRotate180.active {
+    transform: rotate(180deg);
+}
+.line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:#000;
+    stroke-width: 3.5;
+    stroke-linecap:round;
+}
+.ham6 .top {
+    stroke-dasharray: 40 172;
+}
+.ham6 .middle {
+    stroke-dasharray: 40 111;
+}
+.ham6 .bottom {
+    stroke-dasharray: 40 172;
+}
+.ham6.active .top {
+    stroke-dashoffset: -132px;
+}
+.ham6.active .middle {
+    stroke-dashoffset: -71px;
+}
+.ham6.active .bottom {
+    stroke-dashoffset: -132px;
+}
+
+/* responsive navbar */
+.container {
+    margin: 0 auto;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+}
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #b4b1b1;
+    padding-block: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    border: 2px solid #e2cca5;
+}
+.navbar a {
+    text-decoration: none;
+    color: #000000;
+}
+.logo {
+    margin-right: 50px;
+    font-size: 1rem;
+}
+.list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+#toggler,
+.navbar label {
+    display: none;
+}
+
+/* Responsive queries */
+
+@media screen and (max-width: 870px) {
+
+    * {
+        font-size: 15px;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    h4 {
+        font-size: 1.3rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+
+    .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .list {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .navbar label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    #toggler:checked ~ .menu {
+        max-height: 100%;
+    }
+
+    .contact svg {
+        width: 0.8rem;
+    }
+
+    .education svg {
+        width: 10rem;
+    }
+
+    aside {
+        min-width: fit-content;
+    }
+
+    #mail {
+        margin-left: 7%;
+        width: 80%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: clip;
+        position: relative;
+    }
+    
+    #mail::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 20%;
+        background: linear-gradient(to right, transparent, #b4b1b1);
+    }
+    
+
+}
