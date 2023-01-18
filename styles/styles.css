@@ -364,6 +364,13 @@ ul:hover li a:not(:hover) {
 
     aside {
         min-width: fit-content;
+        display: flex;
+        flex-direction: row;
+        height: fit-content;
+        justify-content: space-around;
+        width: 100%;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
     }
 
     #mail {
@@ -384,5 +391,20 @@ ul:hover li a:not(:hover) {
         background: linear-gradient(to right, transparent, #b4b1b1);
     }
     
+    .main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
 
+    section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-ttl {
+        justify-content: center;
+        margin: 15px;
+    }
 }
