@@ -1,6 +1,6 @@
-// function redirect() {
-//     window.location.href = "http://nicolasdeniel.github.io/portfolio";
-// }
+function redirect() {
+    window.location.href = "http://nicolasdeniel.github.io/portfolio";
+}
 
 
 
@@ -38,7 +38,7 @@ let btns = document.querySelectorAll("#btn");
 for (let i = 0; i < btns.length; i++) {
     btns[i].addEventListener('click', function () {
         let p = document.querySelectorAll("#p");
-        if (p[i].className) {
+        if (!p[i].className) {
             p[i].classList.toggle("active");
             p[i].style.display = "none";
         } else {
